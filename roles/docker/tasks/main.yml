@@ -1,0 +1,22 @@
+---
+- name: "Add gpg key"
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: "Add repo"
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
+    state: present
+
+- name: "Update"
+  apt:
+    update_cache: yes
+    force_apt_get: yes
+    cache_valid_time: 3600
+
+- name: "Install pkg"
+  apt:
+    name: docker.io
+    state: present
+    update_cache: yes

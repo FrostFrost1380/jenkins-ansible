@@ -1,1 +1,0 @@
-ansible_host=10.228.1.31 ansible_connection=ssh ansible_ssh_user=user ansible_ssh_pass=emc ansible_sudo_pass=emc
