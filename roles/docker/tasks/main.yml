@@ -20,13 +20,3 @@
     name: docker.io
     state: present
     update_cache: yes
-
-- name: "Add Oracle Java PPA"
-  apt_repository:
-    repo: ppa:webupd8team/java
-    state: present
-
-- name: "Install Java 8"
-  apt:
-    name: oracle-java8-installer
-    update_cache: yes
