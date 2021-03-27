@@ -4,9 +4,21 @@
     name: openjdk-11-jdk
     update_cache: yes
 
-#- name: "python units install"
-#  apt:
-#
+- name: "python units install"
+  apt:
+    name: "libfontconfig"
+
+- name: "python units install"
+  apt:
+    name: "libncurses5-dev"
+
+- name: "python units install"
+  apt:
+    name: "libffi-dev"
+
+- name: "python units install"
+  apt:
+    name: "python3-pip"
 
 - name: "Add Jenkins GPG key"
   apt_key:
