@@ -1,13 +1,12 @@
-- name: "Install packages and dependencies"
-  apt:
-    with_items:
-      - openjdk-11-jdk
-      - libfontconfig
-      - libffi-dev
-      - libncurses5-dev
-      - python3-pip
-    update_cashe: yes
+- name: "Add Oracle Java PPA"
+  apt_repository:
+    repo: ppa:webupd8team/java
     state: present
+
+- name: "Install Java 8"
+  apt:
+    name: oracle-java8-installer
+    update_cache: yes
 
 - name: "Add Jenkins GPG key"
   apt_key:
