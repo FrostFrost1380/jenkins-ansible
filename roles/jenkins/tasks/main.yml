@@ -6,19 +6,19 @@
 
 - name: "python units install"
   apt:
-    name: "libfontconfig"
+    name: libfontconfig
 
 - name: "python units install"
   apt:
-    name: "libncurses5-dev"
+    name: libncurses5-dev
 
 - name: "python units install"
   apt:
-    name: "libffi-dev"
+    name: libffi-dev
 
 - name: "python units install"
   apt:
-    name: "python3-pip"
+    name: python3-pip
 
 - name: "Add Jenkins GPG key"
   apt_key:
