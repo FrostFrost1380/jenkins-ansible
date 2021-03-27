@@ -1,6 +1,11 @@
 - name: "Install packages and dependencies"
   apt:
-    name: ['openjdk-11-jdk', 'libfontconfig', 'libffi', 'libncurses5-dev', 'python3-pip']
+    with_items:
+      - openjdk-11-jdk
+      - libfontconfig
+      - libffi-dev
+      - libncurses5-dev
+      - python3-pip
     update_cashe: yes
     state: present
 
