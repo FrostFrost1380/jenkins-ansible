@@ -1,0 +1,21 @@
+- name: "Install packages and dependencies"
+  apt:
+    name: ['openjdk-11-jdk', 'libfontconfig', 'libffi', 'libncurses5-dev', 'python3-pip']
+    update_cashe: yes
+    state: present
+
+- name: "Add Jenkins GPG key"
+  apt_key:
+    url: https://pkg.jenkins.io/debian-stable/jenkins.io.key
+    state: present
+
+- name: "add jenkins repo"
+  apt_repository:
+    repo: deb https://pkg.jenkins.io/debian-stable binary/
+    update_cashe: yes
+    state: present
+
+- name: "Install Jenkins server"
+  apt:
+    name: jenkins
+    state: present
