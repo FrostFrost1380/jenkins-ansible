@@ -4,6 +4,10 @@
     name: openjdk-11-jdk
     update_cache: yes
 
+#- name: "python units install"
+#  apt:
+#
+
 - name: "Add Jenkins GPG key"
   apt_key:
     url: https://pkg.jenkins.io/debian-stable/jenkins.io.key
@@ -12,7 +16,6 @@
 - name: "add jenkins repo"
   apt_repository:
     repo: deb https://pkg.jenkins.io/debian-stable binary/
-    update_cashe: yes
     state: present
 
 - name: "Install Jenkins server"
