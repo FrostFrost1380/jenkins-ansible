@@ -37,13 +37,13 @@
     update_cache: yes
     
 - name: "Change Jenkins options"
-  lineinfile: 
+  file:
     path=/var/lib/jenkins/config.xml
-    regexp='^  <useSecurity>true</useSecurity>\n'
-    line='  <useSecurity>false</useSecurity>\n'
+  state: absent
+#    regexp='^  <useSecurity>true</useSecurity>\n'
+#    line='  <useSecurity>false</useSecurity>\n'
   become: true
-  become_method: sudo
-  become_user: root
+
 
 
 - name: "Start Jenkins service and enable on boot"
