@@ -39,8 +39,8 @@
 - name: "Change Jenkins options"
   lineinfile: 
     dest=/var/lib/jenkins
-    regexp="<useSecurity>true</useSecurity>"
-    line="<useSecurity>false</useSecurity>"
+    regexp='^<useSecurity>true</useSecurity>'
+    line='<useSecurity>false</useSecurity>'
   become: true
   become_method: sudo
   become_user: root
