@@ -42,6 +42,8 @@
     regexp="^<useSecurity>true</useSecurity>"
     line="^<useSecurity>false</useSecurity>"
   become: true
+  become_method: sudo
+  become_user: root
 
 - name: "Start Jenkins service and enable on boot"
   service:
