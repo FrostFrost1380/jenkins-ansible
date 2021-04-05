@@ -49,5 +49,5 @@
 - name: "Start Jenkins service and enable on boot"
   service:
     name: jenkins
-    state: started
+    state: restarted
     enabled: yes
